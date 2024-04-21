@@ -1,3 +1,5 @@
+require_relative 'node'
+
 class LinkedList
   attr_accessor :head,:tail,:size
 
@@ -78,12 +80,5 @@ class LinkedList
     before_node = at(index - 1)
     old_node = at(index)
     before_node.next_node = old_node.next_node
-  end
-end
-class Node
-  attr_accessor :value,:next_node
-  def initialize(value = nil,next_node = nil)
-    @value = value
-    @next_node = next_node
   end
 end
